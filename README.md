@@ -23,7 +23,7 @@ This project is a Spring Boot application that manages product add to cart and t
 The project leverages a microservices architecture using Spring Boot, Eureka Server, and API Gateway to manage the features of product, cart, and inventory. 
 It uses an association table to connect between product and cart, and utilizes Spring RestTemplate in the Inventory Service to interact and get the product ID to manage the quantity of each product. 
 A shared microservice is used to share common entities across the different microservices.
-## Getting Started
+
 
 ## Microservices
 - API Gateway: Controls and routes requests to the appropriate microservice.
