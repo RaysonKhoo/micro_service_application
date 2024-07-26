@@ -1,0 +1,27 @@
+eureka:
+  client:
+    register-with-eureka: false
+    fetchRegistry: false
+server:
+  port: 8888
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      discovery:
+        Locator:
+          enabled: true
+      routes:
+        - id: Product
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/product/**
+        - id: Inventory
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/inventory/**
+        - id: Authentication
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/user/**
